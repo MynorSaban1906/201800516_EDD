@@ -10,8 +10,8 @@ public:
     void agregar(Nodo *nuevo);
     Nodo* get(int i);
     void imprimir();
-    void buscar(string nombre);
-    void borrar(string nombre);
+    void buscar(long nombre);
+    void borrar(long nombre);
 private:
     Nodo *cabeza,*cola;
 

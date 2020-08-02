@@ -1,5 +1,6 @@
 #include "nodo.h"
 #include <iostream>
+//el constructor para los datos
 Nodo::Nodo(string nombre,long carne)
 {
     this->carne=carne;
