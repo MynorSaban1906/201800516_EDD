@@ -17,6 +17,19 @@ void Lista::agregar(Nodo *nuevo){
 
     }
 }
+Lista *Lista::clonar(Lista *lista){
+    Nodo *aux=lista->cabeza; //apuntador a la cabeza de la lista
+    Lista *listaCLON=new Lista(); // Declaro la lista en objeto
+    Nodo *aux2=listaCLON->cabeza; //apuntador a la cabeza de la lista nueva
+    while(aux!=NULL){  //recorro la lista  que se va a copiar
+        aux2=aux;  //igualo los nodos para ingresarlos a la nueva lista
+        listaCLON->agregar(aux2);   // agrego los datos
+        aux=aux->siguiente;    // sigue al siguiente nodo
+
+    }
+
+    return listaCLON;
+}
 
 void Lista::buscar(long nombre){
     bool dato=false; // para verificar si existe o no
@@ -69,7 +82,7 @@ void Lista::borrar(long estudiante){
 void Lista::imprimir(){
     Nodo *aux=this->cabeza;
     while(aux!=NULL){  //recorro la lista
-        cout<<"Estudiante :  "<<aux->nombre<<" : "<<aux->carne<<endl;
+        cout<<"Estudiante :  "<<aux->nombre<<" carne : "<<aux->carne<<endl;
         aux=aux->siguiente;
     }
 }

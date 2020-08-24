@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     Lista *listaE=new Lista(); // Declaro la lista en objeto
-    Nodo *e1,*e2,*e3,*e4,*e5;//nodos donde se enviaran los datos
+    Nodo *e1,*e4,*e5,*e2,*e3;//nodos donde se enviaran los datos
     e1=new Nodo("Mynor Saban",201800516);
     e2=new Nodo("Mario Lopez",201905164);
     e3=new Nodo("Antonio Marinez",20175421);
@@ -21,11 +21,19 @@ int main()
     listaE->agregar(e3);
     cout<<"\nLos datos se Imprimen "<<endl;
     listaE->imprimir();
+    cout<<"\nLos datos de la lista clonada "<<endl;
+    listaE->clonar(listaE)->imprimir();
     cout<<"\nSe busca al Estudiante"<<endl;
     listaE->buscar(20135421);
     cout<<"\nSe borra al Estudiante"<<endl;
-    listaE->borrar(201905164);
+    listaE->borrar(2000905135);
     cout<<"\nLos datos se imprimen nuevamente"<<endl;
     listaE->imprimir();
+
+    cout<<"\n\n";
+
     return 0;
 }
+
+
+
